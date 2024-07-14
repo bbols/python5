@@ -4,6 +4,7 @@ import platform
 from file_manager import create_folder, delete_item, copy_item, list_items, list_folders, list_files
 from quiz import play_quiz
 from bank_account import manage_bank_account
+#12
 
 def main_menu():
     print("\nМеню:")
