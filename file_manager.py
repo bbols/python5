@@ -36,26 +36,15 @@ def copy_item(source_name, destination_name):
 
 def list_items():
     items = os.listdir()
-    if items:
-        for item in items:
-            print(item)
-    else:
-        print("Рабочая директория пуста.")
+    print('\n'.join(item for item in os.listdir()) if items else 'Рабочая директория пуста.')
+
 
 def list_folders():
     items = os.listdir()
     folders = [item for item in items if os.path.isdir(item)]
-    if folders:
-        for folder in folders:
-            print(folder)
-    else:
-        print("В рабочей директории нет папок.")
+    print("\n".join(folder for folder in folders) if folders else "В рабочей директории нету папок")
 
 def list_files():
     items = os.listdir()
     files = [item for item in items if os.path.isfile(item)]
-    if files:
-        for file in files:
-            print(file)
-    else:
-        print("В рабочей директории нет файлов.")
+    print("\n".join(file for file in files) if files else "в рабочей директории нету файлов")
